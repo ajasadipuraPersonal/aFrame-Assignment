@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script>
+  </head>
+  <body>
+    <audio src="jellyfishJamSongEdited.mp3" autoplay>
+      <p>If you are reading this, it is because your browser does not support the audio element.     </p>
+      <embed src="jellyfishJamSongEdited.mp3" width="180" height="90" hidden="true" />
+      </audio>
+    <a-scene>
+      <!-- Asset Management System -->
+      <a-assets>
+        <a-asset-item id ="spongebob" src="Assets/spongebob/scene.gltf"></a-asset-item>
+        <a-asset-item id="Jellyfish" src="Assets/jellyfish/scene.gltf"></a-asset-item>
+        <a-asset-item id="gary" src="Assets/gary/scene.gltf"></a-asset-item>
+        <!-- <a-asset-item id="grass" src="Assets/grass/scene.gltf" color="light green"></a-asset-item> -->
+
+      </a-assets>
+
+      <a-sky src="Assets/ready360sky.jpg" segments-height ="5" segments-width="5" color="#AED6F1"></a-sky>
+
+      <!-- Spongebob -->
+      <a-entity position="-4 0.017 -8" gltf-model="#spongebob" scale = "2 2 2"></a-entity>
+
+      <!-- Gary -->
+      <a-entity position="-2.3 0.017 -8" gltf-model="#gary" scale = "0.005 0.005 0.005"  rotation="0 270 0"></a-entity>
+
+
+      <!-- Jellyfish -->
+      <a-entity position="0 1 -4.0" gltf-model="#Jellyfish" scale = "0.005 0.005 0.005" animation__yoyo="property: position; dir: alternate; dur: 1000; easing: easeInSine; loop: true; to: 0 2 0"></a-entity>
+      <a-entity position="2 3 -4.0" gltf-model="#Jellyfish" scale = "0.005 0.005 0.005" animation__yoyo="property: position; dir: alternate; dur: 1000; easing: easeInSine; loop: true; to: 2 1 -4"></a-entity>
+
+      <a-entity position="-8 1 -4.0" gltf-model="#Jellyfish" scale = "0.005 0.005 0.005" animation__yoyo="property: position; dir: alternate; dur: 1000; easing: easeInSine; loop: true; to: -8 2 0"></a-entity>
+      <a-entity position="-10 3 -4.0" gltf-model="#Jellyfish" scale = "0.005 0.005 0.005" animation__yoyo="property: position; dir: alternate; dur: 1000; easing: easeInSine; loop: true; to: -10 1 -4"></a-entity>
+
+      <a-entity position="4 1 -4.0" gltf-model="#Jellyfish" scale = "0.005 0.005 0.005" animation__yoyo="property: position; dir: alternate; dur: 1000; easing: easeInSine; loop: true; to: 4 2 0"></a-entity>
+      <a-entity position="6 3 -4.0" gltf-model="#Jellyfish" scale = "0.005 0.005 0.005" animation__yoyo="property: position; dir: alternate; dur: 1000; easing: easeInSine; loop: true; to: 6 1 -4"></a-entity>
+
+      <a-entity position="-12 1 -4.0" gltf-model="#Jellyfish" scale = "0.005 0.005 0.005" animation__yoyo="property: position; dir: alternate; dur: 1000; easing: easeInSine; loop: true; to: -12 2 0"></a-entity>
+      <a-entity position="-14 3 -4.0" gltf-model="#Jellyfish" scale = "0.005 0.005 0.005" animation__yoyo="property: position; dir: alternate; dur: 1000; easing: easeInSine; loop: true; to: -14 1 -4"></a-entity>
+
+      <!-- Camera -->
+      <a-entity position="-4 0 5">
+        <a-camera></a-camera>
+      </a-entity>
+
+      <!--- sign -->
+      <a-entity gltf-model="#sign"></a-entity>
+
+      <!-- <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder> -->
+      <a-plane src = "" position="0 0 -4" rotation="-90 0 0" width="50" height="50" color="green";>
+      </a-plane>
+    </a-scene>
+  </body>
+</html>
